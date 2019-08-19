@@ -1,0 +1,13 @@
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\HierarchyExamples.exe.config
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\HierarchyExamples.exe
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\HierarchyExamples.pdb
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\ConsoleMenu.dll
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\obj\Debug\HierarchyExamples.csprojAssemblyReference.cache
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\obj\Debug\HierarchyExamples.csproj.CoreCompileInputs.cache
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\obj\Debug\HierarchyExamples.csproj.CopyComplete
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\obj\Debug\HierarchyExamples.exe
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\obj\Debug\HierarchyExamples.pdb
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\EntityFramework.dll
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\EntityFramework.xml
+C:\Users\Pawel\Source\Repos\HierarchyExamples\HierarchyExamples\bin\Debug\EntityFramework.SqlServer.xml
