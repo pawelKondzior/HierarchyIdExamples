@@ -36,11 +36,8 @@
     <Reference Include="ConsoleMenu, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConsoleMenu-choice.1.0.2\lib\4.5\ConsoleMenu.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EasyConsole, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyConsole.1.1.0\lib\net452\EasyConsole.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -55,11 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleItems\MenuHelper.cs" />
-    <Compile Include="ConsoleItems\MenuItem.cs" />
-    <Compile Include="EF\EFContext.cs" />
-    <Compile Include="EF\Product.cs" />
-    <Compile Include="EF\ProductCategory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\IDataProvidercs.cs" />
@@ -72,6 +64,19 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HierarchyExamples.Contracts\HierarchyExamples.Contracts.csproj">
+      <Project>{86097661-5DB2-40D7-8071-544D4CA89FAF}</Project>
+      <Name>HierarchyExamples.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HierarchyExamples.Helpers\HierarchyExamples.Helpers.csproj">
+      <Project>{DF403863-F133-4792-AE2F-A93228E50483}</Project>
+      <Name>HierarchyExamples.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HierarchyIdExamples62\HierarchyIdExamples62.csproj">
+      <Project>{355fce9c-e2f5-4023-9c26-348499b0631c}</Project>
+      <Name>HierarchyIdExamples62</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

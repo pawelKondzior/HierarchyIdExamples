@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HierarchyExamples.ConsoleItems;
 using ConsoleMenu;
 using System.IO;
+using HierarchyExamples.ConsoleItems;
+using HierarchyExamples63.Services;
+using HierarchyExamples.Contracts;
+using HierarchyExamples.Helpers.Menu;
 
 namespace HierarchyExamples
 {
@@ -14,7 +17,18 @@ namespace HierarchyExamples
         static void Main(string[] args)
         {
 
-            MenuHelper.GetTestMenu();
+            //using (DataServiceEF62 dataService = new DataServiceEF62())
+            //{
+            //    dataService.Add(new ProductCategoryDto()
+            //    {
+            //        Name = "NameTest"
+            //    },null);
+            //}
+
+
+            new BuildMenu().Run();
+
+         //   MenuHelper.StartTestMenu();
 
 
             Console.WriteLine("Press any key to exit");

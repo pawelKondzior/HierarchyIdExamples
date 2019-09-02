@@ -1,0 +1,9 @@
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\bin\Debug\netstandard2.0\HierarchyExamples.Shared.deps.json
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\bin\Debug\netstandard2.0\HierarchyExamples.Shared.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\bin\Debug\netstandard2.0\HierarchyExamples.Shared.pdb
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.csprojAssemblyReference.cache
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.csproj.CoreCompileInputs.cache
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.AssemblyInfoInputs.cache
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.AssemblyInfo.cs
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Shared\obj\Debug\netstandard2.0\HierarchyExamples.Shared.pdb
