@@ -1,4 +1,5 @@
-﻿using EasyConsole;
+﻿using ConsoleTableExt;
+using EasyConsole;
 using HierarchyExamples.Contracts;
 using System;
 using System.Collections.Generic;
@@ -7,32 +8,7 @@ using System.Text;
 namespace HierarchyExamples.Helpers.Menu.Actions
 {
 
-    public class ActionMenuPage : MenuPage
-    {
-        protected IDataService DataService { get; set; }
-
-        public ActionMenuPage(IDataService dataService, string title, Program program, params Option[] options)
-            : base(title, program, options)
-        {
-            DataService = dataService;
-        }
-
-
-        public void WriteTable(string name, List<ProductCategoryDto> list)
-        {
-            Output.WriteLine(string.Format("Table: {0}", name));
-
-
-            foreach (var )
-
-                Output.WriteLine()
-        }
-
-    }
-
-
-
-    class DisplayFirstLevel : ActionMenuPage
+    public class DisplayFirstLevel : ActionMenuPage
     {
         public DisplayFirstLevel(IDataService dataService, Program program)
             : base(dataService, "DisplayFirstLevel", program
@@ -40,23 +16,19 @@ namespace HierarchyExamples.Helpers.Menu.Actions
                   ///new Option("Page 1B", () => program.NavigateTo<Page1B>())
                   )
         {
-           
+
         }
 
         public override void Display()
         {
-            base.Display();
-
             var topLevel = DataService.GetTopLevel();
 
-           
+            WriteTable("display top level", topLevel);
 
-           
-
-            
 
             Input.ReadString("Press [Enter] to navigate home");
-            Program.NavigateHome();
+
+            Program.NavigateBack();
         }
 
     }

@@ -1,31 +1,27 @@
 ﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Helpers.Menu.Actions;
-using HierarchyExamples63.Services;
+using HierarchyExamples62.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HierarchyExamples.Helpers.Menu
 {
-    class EF62Page : MenuPage
+    class EF62Page : BaseMenuPage
     {
 
-        private IDataService DataService { get; set; }
+        
 
         public EF62Page(Program program)
-            : base("Page 1", program,
-                  new Option("Display First Level", () => program.NavigateTo<DisplayFirstLevel>())
-                  ///new Option("Page 1B", () => program.NavigateTo<Page1B>())
-                  )
+            : base("Page 1", program)
         {
-            DataService = new DataServiceEF62();
+            
+        }
 
-
-            program.AddPage(new DisplayFirstLevel(DataService, program));
-
-           
-
+        public override IDataService GetDataService()
+        {
+            return new DataServiceEF62(); 
         }
     }
 }

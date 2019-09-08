@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "95a28ed1dd8dd1c24c2d06cb4d455a94b07a358f"
+    "signature": "8948baa0d19ab4b1284cfb7210ea087936a27991"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
       "HierarchyExamples.Helpers/1.0.0": {
         "dependencies": {
           "ConsoleMenu-choice": "1.0.2",
+          "ConsoleTableExt": "2.0.2",
           "EasyConsole": "1.1.0",
           "Gold.ConsoleMenu": "2.1.0",
           "HierarchyExamples.Contracts": "1.0.0",
@@ -25,6 +26,14 @@
           "lib/4.5/ConsoleMenu.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "ConsoleTableExt/2.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/ConsoleTableExt.dll": {
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
           }
         }
       },
@@ -101,6 +110,13 @@
       "sha512": "sha512-9qPGzQZeemZdjAwRUA9spxFeHetIVkAK7oWD9kVj+ZCo6cMeEniSBW4vhgWhXDO0IdTdO7J5gxpcUQIU0pp8Uw==",
       "path": "consolemenu-choice/1.0.2",
       "hashPath": "consolemenu-choice.1.0.2.nupkg.sha512"
+    },
+    "ConsoleTableExt/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jMW+4qdfpmXZSg6b8Cwyl2VkQGrGdl/ak53nHzBckqF2KXqcxYhvL3AaQfbJIknaj1PZklD9FXncfnYGEkyndw==",
+      "path": "consoletableext/2.0.2",
+      "hashPath": "consoletableext.2.0.2.nupkg.sha512"
     },
     "EasyConsole/1.1.0": {
       "type": "package",

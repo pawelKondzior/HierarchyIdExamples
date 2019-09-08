@@ -28,7 +28,7 @@ namespace HierarchyExamples63.Services
             throw new NotImplementedException();
         }
 
-        public List<ProductCategoryDto> GetChilds(int categoryId)
+        public List<ProductCategoryDto> GetChilds(int? categoryId)
         {
             throw new NotImplementedException();
         }

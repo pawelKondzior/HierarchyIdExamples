@@ -6,3 +6,4 @@ C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\De
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.AssemblyInfo.cs
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.pdb
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.csprojAssemblyReference.cache

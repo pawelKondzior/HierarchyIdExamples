@@ -11,6 +11,15 @@
           "lib/4.5/ConsoleMenu.dll": {}
         }
       },
+      "ConsoleTableExt/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ConsoleTableExt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ConsoleTableExt.dll": {}
+        }
+      },
       "EasyConsole/1.1.0": {
         "type": "package",
         "compile": {
@@ -99,6 +108,19 @@
         "consolemenu-choice.1.0.2.nupkg.sha512",
         "consolemenu-choice.nuspec",
         "lib/4.5/ConsoleMenu.dll"
+      ]
+    },
+    "ConsoleTableExt/2.0.2": {
+      "sha512": "jMW+4qdfpmXZSg6b8Cwyl2VkQGrGdl/ak53nHzBckqF2KXqcxYhvL3AaQfbJIknaj1PZklD9FXncfnYGEkyndw==",
+      "type": "package",
+      "path": "consoletableext/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consoletableext.2.0.2.nupkg.sha512",
+        "consoletableext.nuspec",
+        "lib/net45/ConsoleTableExt.dll",
+        "lib/netstandard2.0/ConsoleTableExt.dll"
       ]
     },
     "EasyConsole/1.1.0": {
@@ -286,6 +308,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "ConsoleMenu-choice >= 1.0.2",
+      "ConsoleTableExt >= 2.0.2",
       "EasyConsole >= 1.1.0",
       "Gold.ConsoleMenu >= 2.1.0",
       "HierarchyExamples.Contracts >= 1.0.0",
@@ -344,6 +367,10 @@
           "ConsoleMenu-choice": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "ConsoleTableExt": {
+            "target": "Package",
+            "version": "[2.0.2, )"
           },
           "EasyConsole": {
             "target": "Package",

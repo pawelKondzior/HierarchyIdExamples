@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HierarchyExamples.Contracts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyIdExamples62", "HierarchyIdExamples62\HierarchyIdExamples62.csproj", "{355FCE9C-E2F5-4023-9C26-348499B0631C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyExamples.Shared", "HierarchyExamples.Shared\HierarchyExamples.Shared.csproj", "{A0402BDC-82F2-4987-9AE7-D0AB6D37AEE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HierarchyExamples.Shared", "HierarchyExamples.Shared\HierarchyExamples.Shared.csproj", "{A0402BDC-82F2-4987-9AE7-D0AB6D37AEE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{75FE878F-C9B0-49B2-A196-37148599BEDD}"
+	ProjectSection(SolutionItems) = preProject
+		Data\mydata.sql = Data\mydata.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

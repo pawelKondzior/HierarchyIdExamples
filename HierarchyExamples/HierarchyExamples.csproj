@@ -36,6 +36,9 @@
     <Reference Include="ConsoleMenu, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConsoleMenu-choice.1.0.2\lib\4.5\ConsoleMenu.dll</HintPath>
     </Reference>
+    <Reference Include="ConsoleTableExt, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConsoleTableExt.2.0.2\lib\net45\ConsoleTableExt.dll</HintPath>
+    </Reference>
     <Reference Include="EasyConsole, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyConsole.1.1.0\lib\net452\EasyConsole.dll</HintPath>
     </Reference>

@@ -8,7 +8,7 @@ namespace HierarchyExamples.Contracts
     {
         List<ProductCategoryDto> GetTopLevel();
 
-        List<ProductCategoryDto> GetChilds(int categoryId);
+        List<ProductCategoryDto> GetChilds(int? categoryId);
 
         void Add(ProductCategoryDto add, int? parentId);
 

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConsoleMenu-choice" Version="1.0.2" />
+    <PackageReference Include="ConsoleTableExt" Version="2.0.2" />
     <PackageReference Include="EasyConsole" Version="1.1.0" />
     <PackageReference Include="Gold.ConsoleMenu" Version="2.1.0" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Text;
 using System.Linq;
 using HierarchyExamples.Shared;
 
-namespace HierarchyExamples63.Services
+namespace HierarchyExamples62.Services
 {
     public class DataServiceEF62 : IDataService
     {
@@ -62,7 +62,7 @@ namespace HierarchyExamples63.Services
         }
 
 
-        public List<ProductCategoryDto> GetChilds(int categoryId)
+        public List<ProductCategoryDto> GetChilds(int? categoryId)
         {
             var categoryList = Context.ProductCategory
                 .Where(x => x.ParentId == categoryId)
