@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Contracts
 {
@@ -17,5 +16,7 @@ namespace HierarchyExamples.Contracts
         List<ProductCategoryDto> GetAll();
 
         List<ProductCategoryDto> GetTree();
+
+        ProductCategoryExtendedDto Get(int? id);
     }
 }

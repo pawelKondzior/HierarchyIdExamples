@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using ConsoleMenu;
 using System.IO;
 using HierarchyExamples.ConsoleItems;
-using HierarchyExamples62.Services;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Helpers.Menu;
 
@@ -27,9 +26,6 @@ namespace HierarchyExamples
 
 
             new BuildMenu().Run();
-
-         //   MenuHelper.StartTestMenu();
-
 
             Console.WriteLine("Press any key to exit");
             Console.Read();

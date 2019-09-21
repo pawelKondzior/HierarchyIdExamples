@@ -17,6 +17,10 @@ namespace HierarchyIdExamples62.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ProductCategory>()
+               .HasMany(e => e.Childs)
+               .WithOptional(e => e.Parent)
+               .HasForeignKey(e => e.ParentId);
         }
     }
 }

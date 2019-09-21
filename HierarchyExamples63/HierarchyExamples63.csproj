@@ -39,9 +39,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.3.0-preview8-19405-04\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.3.0-preview8-19405-04\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -55,9 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EF\EFContext.cs" />
     <Compile Include="EF\ProductCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\DataServiceEF63.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +73,10 @@
     <ProjectReference Include="..\HierarchyExamples.Contracts\HierarchyExamples.Contracts.csproj">
       <Project>{86097661-5db2-40d7-8071-544d4ca89faf}</Project>
       <Name>HierarchyExamples.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HierarchyExamples.Shared\HierarchyExamples.Shared.csproj">
+      <Project>{A0402BDC-82F2-4987-9AE7-D0AB6D37AEE7}</Project>
+      <Name>HierarchyExamples.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

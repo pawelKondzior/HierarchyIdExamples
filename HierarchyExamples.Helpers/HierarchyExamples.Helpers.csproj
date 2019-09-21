@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Menu\NavigationOptions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ConsoleMenu-choice" Version="1.0.2" />
     <PackageReference Include="ConsoleTableExt" Version="2.0.2" />
     <PackageReference Include="EasyConsole" Version="1.1.0" />
@@ -13,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HierarchyExamples.Contracts\HierarchyExamples.Contracts.csproj" />
+    <ProjectReference Include="..\HierarchyExamples63\HierarchyExamples63.csproj" />
     <ProjectReference Include="..\HierarchyIdExamples62\HierarchyIdExamples62.csproj" />
   </ItemGroup>
 

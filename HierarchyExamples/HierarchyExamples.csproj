@@ -76,10 +76,6 @@
       <Project>{DF403863-F133-4792-AE2F-A93228E50483}</Project>
       <Name>HierarchyExamples.Helpers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HierarchyIdExamples62\HierarchyIdExamples62.csproj">
-      <Project>{355fce9c-e2f5-4023-9c26-348499b0631c}</Project>
-      <Name>HierarchyIdExamples62</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

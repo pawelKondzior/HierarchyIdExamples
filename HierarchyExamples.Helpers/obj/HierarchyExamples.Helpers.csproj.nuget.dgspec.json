@@ -85,6 +85,9 @@
               "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj": {
                 "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj"
               },
+              "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj": {
+                "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj"
+              },
               "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyIdExamples62\\HierarchyIdExamples62.csproj": {
                 "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyIdExamples62\\HierarchyIdExamples62.csproj"
               }
@@ -181,6 +184,29 @@
           "assetTargetFallback": true,
           "warn": true
         }
+      }
+    },
+    "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj",
+        "projectName": "HierarchyExamples63",
+        "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj": {
+                "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj"
+              },
+              "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Shared\\HierarchyExamples.Shared.csproj": {
+                "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Shared\\HierarchyExamples.Shared.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     },
     "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyIdExamples62\\HierarchyIdExamples62.csproj": {

@@ -1,6 +1,8 @@
 ﻿using ConsoleTableExt;
 using EasyConsole;
 using HierarchyExamples.Contracts;
+using HierarchyExamples.Helpers.Helpers;
+using HierarchyExamples.Helpers.Menu.Base;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,7 +25,7 @@ namespace HierarchyExamples.Helpers.Menu.Actions
         {
             var topLevel = DataService.GetTopLevel();
 
-            WriteTable("display top level", topLevel);
+            DisplayHelpers.WriteTable("display top level", topLevel);
 
 
             Input.ReadString("Press [Enter] to navigate home");

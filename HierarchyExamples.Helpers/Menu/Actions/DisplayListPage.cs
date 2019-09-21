@@ -5,7 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-
+using HierarchyExamples.Helpers.Helpers;
+using HierarchyExamples.Helpers.Menu.Base;
 
 namespace HierarchyExamples.Helpers.Menu.Actions
 {
@@ -29,7 +30,7 @@ namespace HierarchyExamples.Helpers.Menu.Actions
 
             var possibleIds = list.Select(x => x.Id);
 
-            WriteTable("display top level", list);
+            DisplayHelpers.WriteTable("display top level", list);
 
             if (list.Any())
             {
@@ -52,5 +53,6 @@ namespace HierarchyExamples.Helpers.Menu.Actions
             Program.NavigateBack();
         }
 
+      
     }
 }

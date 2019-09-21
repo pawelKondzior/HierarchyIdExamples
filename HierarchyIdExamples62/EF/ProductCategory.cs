@@ -9,6 +9,14 @@ namespace HierarchyIdExamples62.EF
     [Table("ProductCategory")]
     public partial class ProductCategory
     {
+        public ProductCategory()
+        {
+            Product = new HashSet<Product>();
+            Childs = new HashSet<ProductCategory>();
+        }
+
+        
+
         public int Id { get; set; }
 
         [Required]
@@ -16,5 +24,11 @@ namespace HierarchyIdExamples62.EF
         public string Name { get; set; }
 
         public int? ParentId { get; set; }
+
+        public virtual ICollection<Product> Product { get; set; }
+
+        public virtual ICollection<ProductCategory> Childs { get; set; }
+
+        public virtual ProductCategory Parent { get; set; }
     }
 }

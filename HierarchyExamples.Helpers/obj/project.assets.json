@@ -82,6 +82,19 @@
           "bin/placeholder/HierarchyExamples.Shared.dll": {}
         }
       },
+      "HierarchyExamples63/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "HierarchyExamples.Contracts": "1.0.0",
+          "HierarchyExamples.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HierarchyExamples63.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HierarchyExamples63.dll": {}
+        }
+      },
       "HierarchyIdExamples62/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -299,6 +312,11 @@
       "path": "../HierarchyExamples.Shared/HierarchyExamples.Shared.csproj",
       "msbuildProject": "../HierarchyExamples.Shared/HierarchyExamples.Shared.csproj"
     },
+    "HierarchyExamples63/1.0.0": {
+      "type": "project",
+      "path": "../HierarchyExamples63/HierarchyExamples63.csproj",
+      "msbuildProject": "../HierarchyExamples63/HierarchyExamples63.csproj"
+    },
     "HierarchyIdExamples62/1.0.0": {
       "type": "project",
       "path": "../HierarchyIdExamples62/HierarchyIdExamples62.csproj",
@@ -312,6 +330,7 @@
       "EasyConsole >= 1.1.0",
       "Gold.ConsoleMenu >= 2.1.0",
       "HierarchyExamples.Contracts >= 1.0.0",
+      "HierarchyExamples63 >= 1.0.0",
       "HierarchyIdExamples62 >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -348,6 +367,9 @@
           "projectReferences": {
             "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj": {
               "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples.Contracts\\HierarchyExamples.Contracts.csproj"
+            },
+            "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj": {
+              "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyExamples63\\HierarchyExamples63.csproj"
             },
             "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyIdExamples62\\HierarchyIdExamples62.csproj": {
               "projectPath": "C:\\ProjektGit\\HierarchyID\\HierarchyIdExamples\\HierarchyIdExamples62\\HierarchyIdExamples62.csproj"

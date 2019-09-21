@@ -14,6 +14,7 @@
           "EasyConsole": "1.1.0",
           "Gold.ConsoleMenu": "2.1.0",
           "HierarchyExamples.Contracts": "1.0.0",
+          "HierarchyExamples63": "1.0.0",
           "HierarchyIdExamples62": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
@@ -69,12 +70,21 @@
           "HierarchyExamples.Shared.dll": {}
         }
       },
-      "HierarchyIdExamples62/1.0.0": {
+      "HierarchyExamples63/1.0.0": {
         "dependencies": {
           "HierarchyExamples.Contracts": "1.0.0",
           "HierarchyExamples.Shared": "1.0.0",
           "EntityFramework": "6.0.0.0",
           "EntityFramework.SqlServer": "6.0.0.0"
+        },
+        "runtime": {
+          "HierarchyExamples63.dll": {}
+        }
+      },
+      "HierarchyIdExamples62/1.0.0": {
+        "dependencies": {
+          "HierarchyExamples.Contracts": "1.0.0",
+          "HierarchyExamples.Shared": "1.0.0"
         },
         "runtime": {
           "HierarchyIdExamples62.dll": {}
@@ -84,7 +94,7 @@
         "runtime": {
           "EntityFramework.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
+            "fileVersion": "6.300.19.40504"
           }
         }
       },
@@ -92,7 +102,7 @@
         "runtime": {
           "EntityFramework.SqlServer.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.2.61023.0"
+            "fileVersion": "6.300.19.40504"
           }
         }
       }
@@ -152,6 +162,11 @@
       "sha512": ""
     },
     "HierarchyExamples.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HierarchyExamples63/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

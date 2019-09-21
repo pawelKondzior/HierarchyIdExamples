@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace HierarchyExamples.Contracts
@@ -11,4 +10,5 @@ namespace HierarchyExamples.Contracts
 
 
     }
+
 }

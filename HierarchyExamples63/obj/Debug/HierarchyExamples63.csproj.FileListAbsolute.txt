@@ -12,3 +12,5 @@ C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\Enti
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\obj\Debug\HierarchyExamples63.csproj.CopyComplete
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\obj\Debug\HierarchyExamples63.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\obj\Debug\HierarchyExamples63.pdb
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\HierarchyExamples.Shared.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\HierarchyExamples.Shared.pdb
