@@ -7,6 +7,7 @@ using HierarchyExamples63.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace HierarchyExamples.Helpers.Menu
 {
@@ -22,8 +23,23 @@ namespace HierarchyExamples.Helpers.Menu
 
         public override void Display()
         {
+       //     DataService = GetDataService();
+
+        ///    base.Display();
+
+       
             ActionMenuPage.CurrentParentID = null;
             Program.NavigateTo<DisplayCategory>();
+
+            //var lastItem = Program.History.LastOrDefault(x => x.GetType() != this.GetType());
+            //if (lastItem.GetType() == typeof(MainPage))
+            //{
+            //    Program.NavigateTo<DisplayCategory>();
+            //}
+            //else
+            //{
+            //    Program.NavigateTo<MainPage>();
+            //}
         }
 
 

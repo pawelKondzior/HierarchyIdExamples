@@ -23,6 +23,11 @@ namespace HierarchyExamples.Helpers.Menu.Base
             DataService = dataService;
         }
 
+        public ActionMenuPage(Func<IDataService> dataServiceFunc, string title, Program program, params Option[] options)
+           : base(title, program, options)
+        {
+            ///DataService = dataService;
+        }
 
         public void DispalyCurrentLevel()
         {

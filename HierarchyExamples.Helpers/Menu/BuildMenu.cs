@@ -15,12 +15,6 @@ namespace HierarchyExamples.Helpers.Menu
             AddPage(new EF62Page(this));
             AddPage(new EF63Page(this));
 
-
-        
-            //AddPage(new Page1B(this));
-            //AddPage(new Page2(this));
-            //AddPage(new InputPage(this));
-
             SetPage<MainPage>();
         }
     }

@@ -16,10 +16,13 @@ namespace HierarchyExamples.Helpers.Menu.Actions
         public int? ParentId { get; set; }
         public bool Close { get; set; } 
         public DisplayListPage(IDataService dataService, Program program)
-            : base(dataService, "DisplayListPage", program
-                  //new Option("Page 1A", () => program.NavigateTo<Page1A>()),
-                  ///new Option("Page 1B", () => program.NavigateTo<Page1B>())
-                  )
+            : base(dataService, "DisplayListPage", program)
+        {
+
+        }
+
+        public DisplayListPage(Func<IDataService> dataService, Program program)
+            : base(dataService, "DisplayListPage", program)
         {
 
         }

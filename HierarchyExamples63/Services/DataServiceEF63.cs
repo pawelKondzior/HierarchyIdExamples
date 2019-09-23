@@ -10,7 +10,7 @@ using System.Text;
 
 namespace HierarchyExamples63.Services
 {
-    public class DataServiceEF63 : IDataService
+    public class DataServiceEF63 : BaseDataService, IDataService
     {
         private EFContext Context { get; set; }
 
@@ -33,40 +33,58 @@ namespace HierarchyExamples63.Services
             if (!id.HasValue || id == 0)
             {
                 result.Childs = GetTopLevel();
+
                 return result;
             }
 
-            var category = Context.ProductCategory
-                .AsQueryable()
-                .FirstOrDefault();
-              ///  .Include(x => x.Childs)
-                ///.FirstOrDefault(x => x.Id == id);
 
-            ///result.Name = category.Name;
-            // result.Childs = GetDtoList(category.Childs);
+            var parentCategory = Context.HierarchyCategory
+                .AsQueryable()
+                .FirstOrDefault(x => x.Id == id);
+
+            var childCategoryQuery =
+                Context.HierarchyCategory
+                .AsQueryable()
+                .Where(x => x.Level.IsDescendantOf(parentCategory.Level) 
+                && x.Level.GetLevel() == (parentCategory.Level.GetLevel() + 1));
+
+            var childList = childCategoryQuery.ToList();
+
+            result.Name = parentCategory.Name;
+            result.Childs = GetDtoList(childList);
 
             return result;
         }
 
         public void Add(ProductCategoryDto add, int? parentId)
         {
-            var entity = Context.ProductCategory.Create();
+            var entity = Context.HierarchyCategory.Create();
             entity.Name = add.Name;
-            entity.Level = HierarchyId.Parse("/1/");
-
-            HierarchyId.GetRoot()
-            
-            Context.ProductCategory.Add(entity);
+            Context.HierarchyCategory.Add(entity);
             Context.SaveChanges();
+
+            if (!parentId.HasValue)
+            {
+                entity.Level = HierarchyId.Parse(string.Format("/{0}/", entity.Id));
+                Context.SaveChanges();
+                return;
+            }
+            else
+            {
+                var parentEntity = Context.HierarchyCategory.FirstOrDefault(x => x.Id == parentId);
+                entity.Level = HierarchyId.Parse(string.Format("{0}{1}/", parentEntity.Level.ToString(), entity.Id));
+                Context.SaveChanges();
+            }
         }
-
-       
-
-        
 
         public List<ProductCategoryDto> GetAll()
         {
-            throw new NotImplementedException();
+            var root = HierarchyId.GetRoot();
+
+            var parentEntity = Context.HierarchyCategory.FirstOrDefault(x => x.Level.IsDescendantOf(root));
+
+
+            return new List<ProductCategoryDto>();
         }
 
         public List<ProductCategoryDto> GetChilds(int? categoryId)
@@ -76,7 +94,13 @@ namespace HierarchyExamples63.Services
 
         public List<ProductCategoryDto> GetTopLevel()
         {
-            return new List<ProductCategoryDto>();
+            //var root = HierarchyId.GetRoot();
+
+            var topLevelsList = Context.HierarchyCategory
+               .Where(x => x.Level.GetLevel() == 1)
+               .ToList();
+
+            return GetDtoList(topLevelsList);
 
             //throw new NotImplementedException();
         }
@@ -87,6 +111,11 @@ namespace HierarchyExamples63.Services
         }
 
         public void Remove(int categoryId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddProducts(int? id)
         {
             throw new NotImplementedException();
         }

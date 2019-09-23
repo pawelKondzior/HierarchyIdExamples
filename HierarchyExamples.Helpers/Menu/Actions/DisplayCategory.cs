@@ -17,6 +17,7 @@ namespace HierarchyExamples.Helpers.Menu.Actions
                   new Option("Add Category", () => program.NavigateTo<AddCategoryPage>()),
                   new Option("Remove Category", () => program.NavigateTo<RemoveCategoryPage>()),
                   new Option("Open Category", () => program.NavigateTo<OpenCategoryPage>()),
+                  new Option("Add Products to current category", () => program.NavigateTo<AddProductsPage>()),
                   //new Option("Display First Level", () => program.NavigateTo<DisplayFirstLevel>()),
                   
                   //new Option("Display List", () => program.NavigateTo<DisplayListPage>()),

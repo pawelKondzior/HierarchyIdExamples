@@ -6,15 +6,12 @@ C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\Consol
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\EasyConsole.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples.Contracts.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples.Helpers.dll
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyIdExamples62.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples63.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\EntityFramework.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\EntityFramework.SqlServer.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples.Shared.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples.Contracts.pdb
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples.Helpers.pdb
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyIdExamples62.pdb
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyIdExamples62.dll.config
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples63.pdb
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\HierarchyExamples63.dll.config
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\EntityFramework.xml
@@ -25,3 +22,8 @@ C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\obj\Debug\Hierar
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\obj\Debug\HierarchyExamples.exe
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\obj\Debug\HierarchyExamples.pdb
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\obj\Debug\HierarchyExamples.csprojAssemblyReference.cache
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples\bin\Debug\Microsoft.SqlServer.Types.dll

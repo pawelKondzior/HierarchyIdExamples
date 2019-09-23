@@ -1,4 +1,5 @@
 ﻿using HierarchyExamples.Shared;
+using HierarchyIdExamples62.EF;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -15,12 +16,19 @@ namespace HierarchyExamples63.EF
           
         }
 
-        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
+        public virtual DbSet<Category> ProductCategory { get; set; }
 
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<HierarchyCategory> HierarchyCategory { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<Category>()
+              .HasMany(e => e.Childs)
+              .WithOptional(e => e.Parent)
+              .HasForeignKey(e => e.ParentId);
+
+
         }
     }
 }

@@ -12,8 +12,7 @@ namespace HierarchyIdExamples62.EF
         {
         }
 
-        public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

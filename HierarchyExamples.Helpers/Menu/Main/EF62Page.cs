@@ -21,6 +21,9 @@ namespace HierarchyExamples.Helpers.Menu
 
         public override void Display()
         {
+            AddMyPages();
+
+        
             ActionMenuPage.CurrentParentID = null;
             Program.NavigateTo<DisplayCategory>();
         }

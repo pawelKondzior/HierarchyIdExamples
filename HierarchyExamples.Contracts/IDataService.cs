@@ -18,5 +18,7 @@ namespace HierarchyExamples.Contracts
         List<ProductCategoryDto> GetTree();
 
         ProductCategoryExtendedDto Get(int? id);
+
+        void AddProducts(int? id);
     }
 }

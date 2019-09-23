@@ -14,3 +14,8 @@ C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\obj\Debug\Hier
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\obj\Debug\HierarchyExamples63.pdb
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\HierarchyExamples.Shared.dll
 C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\HierarchyExamples.Shared.pdb
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples63\bin\Debug\Microsoft.SqlServer.Types.dll

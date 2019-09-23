@@ -11,7 +11,6 @@ namespace HierarchyExamples.Helpers.Menu
            : base("MainPage", program,
                     new Option("EF62Page", () => program.NavigateTo<EF62Page>()),
                     new Option("EF63Page", () => program.NavigateTo<EF63Page>())
-                    //new Option("Input", () => program.NavigateTo<InputPage>())
                  )
         {
         }

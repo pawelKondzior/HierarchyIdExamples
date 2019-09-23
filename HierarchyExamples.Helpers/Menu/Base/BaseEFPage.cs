@@ -16,17 +16,28 @@ namespace HierarchyExamples.Helpers.Menu.Base
                   
                   
         {
-            DataService = GetDataService();
-
-
-            program.AddPage(new DisplayFirstLevel(DataService, program));
-            program.AddPage(new AddCategoryPage(DataService, program));
-            program.AddPage(new DisplayListPage(DataService, program));
-            program.AddPage(new DisplayCategory(DataService, program));
-            program.AddPage(new RemoveCategoryPage(DataService, program));
-            program.AddPage(new OpenCategoryPage(DataService, program));
+            AddMyPages();
         }
 
+        public void AddMyPages()
+        {
+            DataService = GetDataService();
+
+            Program.AddPage(new DisplayFirstLevel(DataService, Program));
+            Program.AddPage(new AddCategoryPage(DataService, Program));
+            Program.AddPage(new DisplayListPage(DataService, Program));
+            Program.AddPage(new DisplayCategory(DataService, Program));
+            Program.AddPage(new RemoveCategoryPage(DataService, Program));
+            Program.AddPage(new OpenCategoryPage(DataService, Program));
+            Program.AddPage(new AddProductsPage(DataService, Program));
+        }
+
+        public override void Display()
+        {
+          //  AddPages();
+
+            base.Display();
+        }
 
         public abstract IDataService GetDataService();
 
