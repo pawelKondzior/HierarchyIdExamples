@@ -66,15 +66,13 @@ namespace HierarchyExamples63.Services
             if (!parentId.HasValue)
             {
                 entity.Level = HierarchyId.Parse(string.Format("/{0}/", entity.Id));
-                Context.SaveChanges();
-                return;
             }
             else
             {
                 var parentEntity = Context.HierarchyCategory.FirstOrDefault(x => x.Id == parentId);
                 entity.Level = HierarchyId.Parse(string.Format("{0}{1}/", parentEntity.Level.ToString(), entity.Id));
-                Context.SaveChanges();
             }
+            Context.SaveChanges();
         }
 
         public List<ProductCategoryDto> GetAll()
