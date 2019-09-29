@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,6 +45,12 @@
     <Reference Include="EasyConsole, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyConsole.1.1.0\lib\net452\EasyConsole.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
@@ -58,10 +67,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Contracts\CategoryDto.cs" />
+    <Compile Include="Contracts\IDataService.cs" />
+    <Compile Include="Contracts\ProductCategoryExtendedDto.cs" />
+    <Compile Include="EF\EFContext.cs" />
+    <Compile Include="EF\HierarchyCategory.cs" />
+    <Compile Include="EF\Product.cs" />
+    <Compile Include="EF\ProductCategory.cs" />
+    <Compile Include="Helpers\DisplayHelpers.cs" />
+    <Compile Include="Menu\Actions\AddCategoryPage.cs" />
+    <Compile Include="Menu\Actions\AddProductsPage.cs" />
+    <Compile Include="Menu\Actions\DisplayCategory.cs" />
+    <Compile Include="Menu\Actions\DisplayFirstLevel.cs" />
+    <Compile Include="Menu\Actions\DisplayListPage.cs" />
+    <Compile Include="Menu\Actions\OpenCategoryPage.cs" />
+    <Compile Include="Menu\Actions\RemoveCategoryPage.cs" />
+    <Compile Include="Menu\Base\ActionMenuPage.cs" />
+    <Compile Include="Menu\Base\BaseEFPage.cs" />
+    <Compile Include="Menu\Base\BaseMenuPage.cs" />
+    <Compile Include="Menu\BuildMenu.cs" />
+    <Compile Include="Menu\Main\ParentChildPage.cs" />
+    <Compile Include="Menu\Main\HierarchyIdPage.cs" />
+    <Compile Include="Menu\Main\MainPage.cs" />
+    <Compile Include="Misc\ReferenceUtil.cs" />
+    <Compile Include="ConsoleProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provider\IDataProvidercs.cs" />
-    <Compile Include="Provider\ProductCategoryItem.cs" />
+    <Compile Include="Services\BaseDataService.cs" />
+    <Compile Include="Services\ParentChildDataService.cs" />
+    <Compile Include="Services\HierarchyIdDataService.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,16 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HierarchyExamples.Contracts\HierarchyExamples.Contracts.csproj">
-      <Project>{86097661-5DB2-40D7-8071-544D4CA89FAF}</Project>
-      <Name>HierarchyExamples.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HierarchyExamples.Helpers\HierarchyExamples.Helpers.csproj">
-      <Project>{DF403863-F133-4792-AE2F-A93228E50483}</Project>
-      <Name>HierarchyExamples.Helpers</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
@@ -97,4 +120,12 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
 </Project>

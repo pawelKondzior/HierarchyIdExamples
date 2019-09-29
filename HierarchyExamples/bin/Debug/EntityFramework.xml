@@ -6451,7 +6451,7 @@
             <param name="type">Metadata for the relation type that represents the relationship.</param>
             <param name="fromEndName">The name of the property of the relation type that represents the end of the relationship from which navigation should occur.</param>
             <param name="toEndName">The name of the property of the relation type that represents the end of the relationship to which navigation should occur.</param>
-            <param name="navigateFrom">An expression the specifies the instance from which naviagtion should occur.</param>
+            <param name="navigateFrom">An expression the specifies the instance from which navigation should occur.</param>
             <exception cref="T:System.ArgumentNullException">type, fromEndName, toEndName or navigateFrom is null.</exception>
             <exception cref="T:System.ArgumentException">type is not associated with this command tree's metadata workspace or navigateFrom is associated with a different command tree, or type does not declare a relation end property with name toEndName or fromEndName, or navigateFrom has a result type that is not compatible with the property type of the relation end property with name fromEndName.</exception>
         </member>
@@ -8221,7 +8221,7 @@
             Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'IsEmptySpatial' function with the specified argument, which must have an Edm.Geography or Edm.Geometry result type. The result type of the expression is Edm.Boolean.
             </summary>
             <returns>A new DbFunctionExpression that returns a Boolean value indicating whether spatialValue is empty.</returns>
-            <param name="spatialValue">An expression that specifies the spatial value from which the IsEmptySptiaal value should be retrieved.</param>
+            <param name="spatialValue">An expression that specifies the spatial value from which the IsEmptySpatial value should be retrieved.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsSimpleGeometry(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
@@ -12065,7 +12065,7 @@
         </member>
         <member name="P:System.Data.Entity.Core.Mapping.EntityTypeModificationFunctionMapping.UpdateFunctionMapping">
             <summary>
-            Gets hte update function mapping.
+            Gets the update function mapping.
             </summary>
         </member>
         <member name="M:System.Data.Entity.Core.Mapping.EntityTypeModificationFunctionMapping.ToString">
@@ -16293,7 +16293,7 @@
             <returns>
             true if the enumerator is moved in the collection of type
             <see
-                cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1.EnumeratortaCollection" />
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1.EnumeratorCollection" />
             ; otherwise, false.
             </returns>
         </member>
@@ -17978,7 +17978,7 @@
         <member name="P:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityState">
             <summary>Gets current state of a tracked object.</summary>
             <returns>
-            An <see cref="T:System.Data.Entity.EntityState" /> that is the state of the tracked object.For more information, see Identity Resolution, State Managment, and Change Tracking and Tracking Changes in POCO Entities.
+            An <see cref="T:System.Data.Entity.EntityState" /> that is the state of the tracked object.For more information, see Identity Resolution, State Management, and Change Tracking and Tracking Changes in POCO Entities.
             </returns>
         </member>
         <member name="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithChangeTracker">
@@ -23225,7 +23225,7 @@
             <exception cref="T:System.InvalidOperationException"> If State is not Modified or Unchanged </exception>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.RejectPropertyChanges(System.String)">
-            <summary>Rejects any changes made to the property with the given name since the property was last loaded, attached, saved, or changes were accepted. The orginal value of the property is stored and the property will no longer be marked as modified.</summary>
+            <summary>Rejects any changes made to the property with the given name since the property was last loaded, attached, saved, or changes were accepted. The original value of the property is stored and the property will no longer be marked as modified.</summary>
             <param name="propertyName">The name of the property to change.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.IsPropertyChanged(System.String)">
@@ -23760,23 +23760,6 @@
             </summary>
             <param name="message">The message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Query.InternalTrees.BitVec.GetArrayLength(System.Int32,System.Int32)">
-            <summary>
-            Used for conversion between different representations of bit array. 
-            Returns (n+(div-1))/div, rearranged to avoid arithmetic overflow. 
-            For example, in the bit to int case, the straightforward calc would 
-            be (n+31)/32, but that would cause overflow. So instead it's 
-            rearranged to ((n-1)/32) + 1, with special casing for 0.
-            
-            Usage:
-            GetArrayLength(77, BitsPerInt32): returns how many ints must be 
-            allocated to store 77 bits.
-            </summary>
-            <param name="n">length of array</param>
-            <param name="div">use a conversion constant, e.g. BytesPerInt32 to get
-            how many ints are required to store n bytes</param>
-            <returns>length of the array</returns>
         </member>
         <member name="M:System.Data.Entity.Core.Query.PlanCompiler.TransformationRulesContext.IncludeCustomFunctionOp(System.Data.Entity.Core.Query.InternalTrees.Node,System.Collections.Generic.Dictionary{System.Data.Entity.Core.Query.InternalTrees.Var,System.Data.Entity.Core.Query.InternalTrees.Node})">
             <summary>
@@ -40310,7 +40293,7 @@
             <summary>
             Initializes a new instance of <see cref="T:System.Data.Entity.ModelConfiguration.Conventions.PropertyMaxLengthConvention"/> with the specified length.
             </summary>
-            <param name="length">The maximum lenght of properties.</param>
+            <param name="length">The maximum length of properties.</param>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.Conventions.PropertyMaxLengthConvention.Apply(System.Data.Entity.Core.Metadata.Edm.EntityType,System.Data.Entity.Infrastructure.DbModel)">
             <inheritdoc/>
@@ -42367,6 +42350,15 @@
             Initializes a new instance of the DbMigrator class.
             </summary>
             <param name="configuration"> Configuration to be used for the migration process. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.#ctor(System.Data.Entity.Migrations.DbMigrationsConfiguration,System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the DbMigrator class using the supplied context.
+            Use this constructor when applying migrations from code to avoid having migrations attempt
+            to create a context/connection for you.
+            </summary>
+            <param name="configuration"> Configuration to be used for the migration process. </param>
+            <param name="context"> The <see cref="T:System.Data.Entity.DbContext"/> to use. </param>
         </member>
         <member name="P:System.Data.Entity.Migrations.DbMigrator.Configuration">
             <summary>
