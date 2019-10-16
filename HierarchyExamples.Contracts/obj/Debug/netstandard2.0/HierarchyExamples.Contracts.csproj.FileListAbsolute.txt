@@ -1,9 +1,0 @@
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\bin\Debug\netstandard2.0\HierarchyExamples.Contracts.deps.json
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\bin\Debug\netstandard2.0\HierarchyExamples.Contracts.dll
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\bin\Debug\netstandard2.0\HierarchyExamples.Contracts.pdb
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.csproj.CoreCompileInputs.cache
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.AssemblyInfoInputs.cache
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.AssemblyInfo.cs
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.dll
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.pdb
-C:\ProjektGit\HierarchyID\HierarchyIdExamples\HierarchyExamples.Contracts\obj\Debug\netstandard2.0\HierarchyExamples.Contracts.csprojAssemblyReference.cache
