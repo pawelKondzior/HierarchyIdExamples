@@ -37,12 +37,7 @@ namespace HierarchyExamples.Menu.Actions
                 Output.DisplayPrompt("Item cannot be open");
             }
 
-            //Input.ReadString("Press [Enter] to navigate home");
-
             Program.NavigateTo<DisplayCategory>();
-
-            ///Program.NavigateBack();
-            //Program.NavigateHome();
         }
 
     }

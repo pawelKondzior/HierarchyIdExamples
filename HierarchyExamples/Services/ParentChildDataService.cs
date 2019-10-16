@@ -135,12 +135,6 @@ namespace HierarchyExamples.Services
             return result;
         }
 
-        public List<ProductCategoryDto> GetTree()
-        {
-            throw new NotImplementedException();
-        }
-        
-
         public void Remove(int categoryId)
         {
             var entity = Context.ProductCategory

@@ -13,9 +13,6 @@ namespace HierarchyExamples.Menu.Base
         public static int? CurrentParentID { get; set; }
 
         public static string CurrentLevelIdP { get; set; }
-        protected IDataService DataService { get; set; }
-
-        
 
         public ActionMenuPage(IDataService dataService, string title, Program program, params Option[] options)
             : base(title, program, options)
@@ -26,19 +23,11 @@ namespace HierarchyExamples.Menu.Base
         public ActionMenuPage(Func<IDataService> dataServiceFunc, string title, Program program, params Option[] options)
            : base(title, program, options)
         {
-            ///DataService = dataService;
         }
 
         public void DispalyCurrentLevel()
         {
 
         }
-
-       
-
-        //public override void Display()
-        //{
-        //    base.Display();
-        //}
     }
 }

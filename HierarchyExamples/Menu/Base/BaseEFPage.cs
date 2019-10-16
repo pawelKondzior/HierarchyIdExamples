@@ -29,7 +29,7 @@ namespace HierarchyExamples.Menu.Base
             Program.AddPage(new DisplayCategory(DataService, Program));
             Program.AddPage(new RemoveCategoryPage(DataService, Program));
             Program.AddPage(new OpenCategoryPage(DataService, Program));
-            Program.AddPage(new AddProductsPage(DataService, Program));
+           // Program.AddPage(new AddProductsPage(DataService, Program));
         }
 
         public override void Display()

@@ -20,8 +20,6 @@ namespace HierarchyExamples.Menu.Actions
         {
             if (CurrentParentID.HasValue)
             {
-                DataService.AddProducts(CurrentParentID);
-
                 Input.ReadString("Products added");
             }
             else

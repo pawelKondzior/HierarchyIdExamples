@@ -21,9 +21,6 @@ namespace HierarchyExamples.Menu.Base
 
         protected void AddPages()
         {
-
-          //  this.Program.SetPage<>
-           // this.Program.AddPage(new DisplayFirstLevel(DataService, this.Program));
             this.Program.AddPage(new AddCategoryPage(DataService, this.Program));
             this.Program.AddPage(new DisplayListPage(DataService, this.Program));
             this.Program.AddPage(new DisplayCategory(DataService, this.Program));

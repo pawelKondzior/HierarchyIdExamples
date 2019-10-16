@@ -21,6 +21,7 @@ namespace HierarchyExamples.Menu
 
         public override void Display()
         {
+            
             AddMyPages();
 
         

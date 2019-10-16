@@ -16,7 +16,6 @@ namespace HierarchyExamples.Menu.Actions
         public RemoveCategoryPage(IDataService dataService, Program program)
             : base(dataService, "Remove category", program)
         {
-
         }
 
         public override void Display()
@@ -30,7 +29,6 @@ namespace HierarchyExamples.Menu.Actions
 
             DisplayHelpers.WriteTable("Choose category to delete", topLevel.Childs);
 
-            //"Enter id of category to remove:"
             var itemToRemoveId = Input.ReadInt();
 
             var possibleIds = topLevel.Childs.Select(x => x.Id);
@@ -48,7 +46,6 @@ namespace HierarchyExamples.Menu.Actions
             Input.ReadString("Press [Enter] to navigate home");
 
             Program.NavigateBack();
-            //Program.NavigateHome();
         }
 
     }

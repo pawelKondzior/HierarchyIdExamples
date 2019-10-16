@@ -38,7 +38,6 @@ namespace HierarchyExamples.Services
                 return result;
             }
 
-
             var parentCategory = Context.HierarchyCategory
                 .AsQueryable()
                 .FirstOrDefault(x => x.Id == id);
@@ -46,11 +45,6 @@ namespace HierarchyExamples.Services
             var childCategoryQuery = Context.HierarchyCategory
                 .AsQueryable()
                 .Where(x => x.Level.GetAncestor(1) == parentCategory.Level); 
-
-
-
-                //.Where(x => x.Level.IsDescendantOf(parentCategory.Level) 
-                //&& x.Level.GetLevel() == (parentCategory.Level.GetLevel() + 1));
 
             var childList = childCategoryQuery.ToList();
 
@@ -101,9 +95,12 @@ namespace HierarchyExamples.Services
                   .OrderByDescending(x => x.Level)
                   .FirstOrDefault();
 
-            var newLevel = parentItem.GetDescendant(lastItemInCurrentLevel.Level, null);
+            var child1Level = lastItemInCurrentLevel != null ? lastItemInCurrentLevel.Level : null;
+
+            var newLevel = parentItem.GetDescendant(child1Level, null);
             entity.Level = newLevel;
 
+            Context.HierarchyCategory.Add(entity);
             Context.SaveChanges();
         }
 
@@ -125,7 +122,6 @@ namespace HierarchyExamples.Services
         public List<ProductCategoryDto> GetTopLevel()
         {
             // first version
-
             var topLevelQuery = Context.HierarchyCategory.Where(x => x.Level.GetLevel() == 1);
 
             // second version
@@ -138,23 +134,28 @@ namespace HierarchyExamples.Services
             var topLevelList = topLevelQuery.ToList();
 
             return GetDtoList(topLevelList);
-
-            //throw new NotImplementedException();
         }
 
         public List<ProductCategoryDto> GetTree()
         {
+            var topLevelQuery = Context.HierarchyCategory.Where(x => x.Level.GetLevel() == 1);
+
             throw new NotImplementedException();
         }
 
         public void Remove(int categoryId)
         {
-            throw new NotImplementedException();
-        }
+            var parentItem = Context.HierarchyCategory.FirstOrDefault(x => x.Id == categoryId);
 
-        public void AddProducts(int? id)
-        {
-            throw new NotImplementedException();
+            var allChildsToDelete = Context.HierarchyCategory
+                .Where(x => x.Level.IsDescendantOf(parentItem.Level))
+                .ToList();
+
+            allChildsToDelete.ForEach(x => Context.HierarchyCategory.Remove(x));
+
+            Context.HierarchyCategory.Remove(parentItem);
+
+            Context.SaveChanges();
         }
     }
 }
