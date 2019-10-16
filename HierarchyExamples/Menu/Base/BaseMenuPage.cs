@@ -1,10 +1,6 @@
 ﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Menu.Actions;
-using HierarchyExamples.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Menu.Base
 {
@@ -13,11 +9,9 @@ namespace HierarchyExamples.Menu.Base
         protected IDataService DataService { get; set; }
 
         public BaseMenuPage(string name, Program program, params Option[] options)
-            : base(name, program,  options)
+            : base(name, program, options)
         {
         }
-
-       
 
         protected void AddPages()
         {
@@ -25,9 +19,5 @@ namespace HierarchyExamples.Menu.Base
             this.Program.AddPage(new DisplayListPage(DataService, this.Program));
             this.Program.AddPage(new DisplayCategory(DataService, this.Program));
         }
-
-   
-
-
     }
 }

@@ -1,8 +1,4 @@
 ﻿using EasyConsole;
-using HierarchyExamples.Menu.Actions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Menu
 {

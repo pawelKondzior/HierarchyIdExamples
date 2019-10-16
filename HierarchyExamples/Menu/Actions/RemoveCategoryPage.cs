@@ -1,16 +1,12 @@
-﻿using ConsoleTableExt;
-using EasyConsole;
+﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Helpers;
 using HierarchyExamples.Menu.Base;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace HierarchyExamples.Menu.Actions
 {
-
     public class RemoveCategoryPage : ActionMenuPage
     {
         public RemoveCategoryPage(IDataService dataService, Program program)
@@ -47,6 +43,5 @@ namespace HierarchyExamples.Menu.Actions
 
             Program.NavigateBack();
         }
-
     }
 }

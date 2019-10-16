@@ -4,10 +4,8 @@ using HierarchyExamples.Misc;
 
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Data.Entity.Hierarchy;
 using System.Linq;
-using System.Text;
 
 namespace HierarchyExamples.Services
 {
@@ -44,7 +42,7 @@ namespace HierarchyExamples.Services
 
             var childCategoryQuery = Context.HierarchyCategory
                 .AsQueryable()
-                .Where(x => x.Level.GetAncestor(1) == parentCategory.Level); 
+                .Where(x => x.Level.GetAncestor(1) == parentCategory.Level);
 
             var childList = childCategoryQuery.ToList();
 
@@ -77,7 +75,7 @@ namespace HierarchyExamples.Services
         {
             var entity = Context.HierarchyCategory.Create();
             entity.Name = add.Name;
-           
+
             HierarchyId parentItem;
             HierarchyCategory lastItemInCurrentLevel;
 
@@ -91,7 +89,7 @@ namespace HierarchyExamples.Services
             }
 
             lastItemInCurrentLevel = Context.HierarchyCategory
-                  .Where(x => x.Level.GetAncestor(1) == parentItem) 
+                  .Where(x => x.Level.GetAncestor(1) == parentItem)
                   .OrderByDescending(x => x.Level)
                   .FirstOrDefault();
 
@@ -109,7 +107,6 @@ namespace HierarchyExamples.Services
             var root = HierarchyId.GetRoot();
 
             var parentEntity = Context.HierarchyCategory.FirstOrDefault(x => x.Level.IsDescendantOf(root));
-
 
             return new List<ProductCategoryDto>();
         }
@@ -129,7 +126,6 @@ namespace HierarchyExamples.Services
 
             //var topLevelQuery = Context.HierarchyCategory
             //   .Where(x => x.Level.GetAncestor(1) == root);
-
 
             var topLevelList = topLevelQuery.ToList();
 

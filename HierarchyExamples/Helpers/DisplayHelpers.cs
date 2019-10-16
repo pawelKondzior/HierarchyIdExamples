@@ -4,15 +4,13 @@ using HierarchyExamples.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace HierarchyExamples.Helpers
 {
     public static class DisplayHelpers
     {
-
         public static void Display(ProductCategoryExtendedDto categoryDto, string tableHeader = "")
-            {
+        {
             if (!string.IsNullOrEmpty(categoryDto.Name))
             {
                 var str = string.Format("Category name: {0}", categoryDto.Name);

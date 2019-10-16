@@ -1,11 +1,4 @@
-﻿
-using HierarchyExamples.EF;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace HierarchyExamples.EF
 {
@@ -13,7 +6,6 @@ namespace HierarchyExamples.EF
     {
         public EFContext() : base("name=EFContext")
         {
-          
         }
 
         public virtual DbSet<Category> ProductCategory { get; set; }

@@ -3,20 +3,14 @@ using HierarchyExamples.Contracts;
 using HierarchyExamples.Menu.Actions;
 using HierarchyExamples.Menu.Base;
 using HierarchyExamples.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 
 namespace HierarchyExamples.Menu
 {
-
-    class HierarchyIdPage : BaseEFPage
+    internal class HierarchyIdPage : BaseEFPage
     {
         public HierarchyIdPage(Program program)
             : base("HierarchyId", program)
         {
-
         }
 
         public override void Display()
@@ -31,6 +25,4 @@ namespace HierarchyExamples.Menu
             return new HierarchyIdDataService();
         }
     }
-
-    
 }

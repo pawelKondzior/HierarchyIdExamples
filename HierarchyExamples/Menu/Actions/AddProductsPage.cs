@@ -1,14 +1,9 @@
-﻿using ConsoleTableExt;
-using EasyConsole;
+﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Menu.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Menu.Actions
 {
-
     public class AddProductsPage : ActionMenuPage
     {
         public AddProductsPage(IDataService dataService, Program program)
@@ -29,6 +24,5 @@ namespace HierarchyExamples.Menu.Actions
 
             Program.NavigateTo<DisplayCategory>();
         }
-
     }
 }

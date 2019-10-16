@@ -1,8 +1,6 @@
 ﻿using HierarchyExamples.Contracts;
 using HierarchyExamples.EF;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Services
 {
@@ -39,7 +37,5 @@ namespace HierarchyExamples.Services
 
             return result;
         }
-
-
     }
 }

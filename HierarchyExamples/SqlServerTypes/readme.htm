@@ -29,7 +29,7 @@
             For ASP.NET Web Sites, add the following block of code to the code behind file of the Web Form where you have added Report Viewer Control:
             <pre>
     Default.aspx.cs:
-        
+
     public partial class _Default : System.Web.UI.Page
     {
         static bool _isSqlTypesLoaded = false;
@@ -41,7 +41,7 @@
                 SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~"));
                 _isSqlTypesLoaded = true;
             }
-            
+
         }
     }
 </pre>

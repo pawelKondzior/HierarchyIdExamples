@@ -1,12 +1,8 @@
 ﻿using EasyConsole;
-using HierarchyExamples.Menu;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HierarchyExamples.Menu
 {
-    class MainPage : MenuPage
+    internal class MainPage : MenuPage
     {
         public MainPage(Program program)
            : base("Main Page", program,
@@ -15,7 +11,5 @@ namespace HierarchyExamples.Menu
                  )
         {
         }
-
-        
     }
 }

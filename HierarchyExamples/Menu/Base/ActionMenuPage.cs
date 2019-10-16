@@ -1,10 +1,6 @@
-﻿using ConsoleTableExt;
-using EasyConsole;
+﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 
 namespace HierarchyExamples.Menu.Base
 {
@@ -27,7 +23,6 @@ namespace HierarchyExamples.Menu.Base
 
         public void DispalyCurrentLevel()
         {
-
         }
     }
 }

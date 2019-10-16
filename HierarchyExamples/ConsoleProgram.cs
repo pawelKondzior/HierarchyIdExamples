@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConsoleMenu;
-using System.IO;
-using HierarchyExamples.Contracts;
-using HierarchyExamples.Menu;
+﻿using HierarchyExamples.Menu;
+using System;
 
 namespace HierarchyExamples
 {
-    class ConsoleProgram
+    internal class ConsoleProgram
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             new BuildMenu().Run();
 

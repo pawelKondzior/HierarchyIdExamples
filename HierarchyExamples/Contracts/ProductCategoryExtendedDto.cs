@@ -6,5 +6,4 @@ namespace HierarchyExamples.Contracts
     {
         public List<ProductCategoryDto> Childs { get; set; }
     }
-
 }

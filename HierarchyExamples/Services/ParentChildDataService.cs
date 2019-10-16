@@ -1,19 +1,15 @@
 ﻿using HierarchyExamples.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Data.Entity;
-using HierarchyExamples.Services;
-using HierarchyExamples.Misc;
 using HierarchyExamples.EF;
+using HierarchyExamples.Misc;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 
 namespace HierarchyExamples.Services
 {
     public class ParentChildDataService : BaseDataService, IDataService
     {
         private EFContext Context { get; set; }
-
 
         public ParentChildDataService()
         {
@@ -22,7 +18,6 @@ namespace HierarchyExamples.Services
             Context = new EFContext();
         }
 
-
         public void Dispose()
         {
             Context.Dispose();
@@ -30,12 +25,11 @@ namespace HierarchyExamples.Services
 
         public void AddProducts(int? id)
         {
-
             var category = Context.ProductCategory
                 .AsQueryable()
                 .FirstOrDefault(x => x.Id == id);
 
-            foreach( var i in Enumerable.Range(1, 10))
+            foreach (var i in Enumerable.Range(1, 10))
             {
                 var product = new Product
                 {
@@ -79,9 +73,6 @@ namespace HierarchyExamples.Services
             return result;
         }
 
-
-
-
         public List<ProductCategoryDto> GetAll()
         {
             var categoryList = Context.ProductCategory.ToList();
@@ -102,7 +93,7 @@ namespace HierarchyExamples.Services
 
         private static void EntitiesToListDto(IEnumerable<Category> categoryList, List<ProductCategoryDto> result)
         {
-            foreach(var entity in categoryList)
+            foreach (var entity in categoryList)
             {
                 var dto = new ProductCategoryDto();
                 dto.Id = entity.Id;
@@ -121,7 +112,6 @@ namespace HierarchyExamples.Services
             var result = GetDtoList(categoryList);
 
             return result;
-
         }
 
         public List<ProductCategoryDto> GetTopLevel()

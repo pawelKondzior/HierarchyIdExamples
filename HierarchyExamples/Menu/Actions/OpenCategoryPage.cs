@@ -1,22 +1,16 @@
-﻿using ConsoleTableExt;
-using EasyConsole;
+﻿using EasyConsole;
 using HierarchyExamples.Contracts;
 using HierarchyExamples.Helpers;
 using HierarchyExamples.Menu.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace HierarchyExamples.Menu.Actions
 {
-
     public class OpenCategoryPage : ActionMenuPage
     {
         public OpenCategoryPage(IDataService dataService, Program program)
             : base(dataService, "Open category", program)
         {
-
         }
 
         public override void Display()
@@ -30,7 +24,7 @@ namespace HierarchyExamples.Menu.Actions
 
             if (possibleIds.Contains(selectedId))
             {
-                CurrentParentID = selectedId; 
+                CurrentParentID = selectedId;
             }
             else
             {
@@ -39,6 +33,5 @@ namespace HierarchyExamples.Menu.Actions
 
             Program.NavigateTo<DisplayCategory>();
         }
-
     }
 }
